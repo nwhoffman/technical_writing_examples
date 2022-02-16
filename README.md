@@ -11,4 +11,4 @@ The content in the `cyber_security` folder is for a Introductory Cybersecurity c
 ### Projects
 
 The Jupyter notebooks in the `personal_projects` folder were written for a personal blog. They are intended as stand-alone tutorials that guide the reader through a complete analysis.
-# technical_writing_examples
+
