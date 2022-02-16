@@ -1,10 +1,6 @@
 # Understand how a multiuser system operates and the role of the root user
 
-## Instructor Notes
-
-## Required Resources
-
-## Overview (I do)
+## Overview
 
 In the past, when computers were large and expensive, it was necessary for more than one person at a time to use a single computer. To maximize limited compter resources, the Unix OS was created to be a multiuser system. Linux is also a multiuser OS and has a protocol for controlling user access to the various files and processes on the operating system.
 
@@ -94,7 +90,7 @@ cyberuser@mycomputer $ pwd
 ```
 
 
-## Follow Along (We do)
+## Follow Along
 
 Using the online Linux terminal (need link here? can we use links within the body of the content?) we will practice logging as the root (superuser) and exploring the file system.
 
@@ -102,7 +98,7 @@ Using the online Linux terminal (need link here? can we use links within the bod
 * change to the su and try again
 * cd to different directories, ls to see what files are there
 
-## Challenge (You do)
+## Challenge
 
 Using your local computer, see if you have root / administrator privileges. Switch to the superuser account and explore the system. **DO NOT CHANGE ANY SETTINGS**
 
@@ -111,12 +107,7 @@ Using your local computer, see if you have root / administrator privileges. Swit
 
 - [How to use su in Linux](https://linoxide.com/how-tos/understand-linux-su-command-function-with-example/)# Understand how to use `sudo` and edit the `sudoers` file
 
-## Instructor Notes
-
-## Required Resources
-
-## Overview (I do)
-
+## Overview
 
 It is not always necessary to use `su` to become a different user, especially if you only need access to a few commands and not the other user's entire environment. The `sudo` command can then be used to issue commands with the priviliges of another user, including root. The name stands for *substitute user do* but is usually referred to as *superuser do* since most uses of `sudo` are for root priviliges.
 
@@ -142,7 +133,7 @@ batman ALL=(ALL:ALL) cat, less
 Here, we have given `batman` privileges for just two commands: `cat` and `less`. 
 
 
-## Follow Along (We do)
+## Follow Along
 
 Let's go over an example for what would be added to the `/etc/sudoers` file for a few examples. This will include:
 
@@ -150,7 +141,7 @@ Let's go over an example for what would be added to the `/etc/sudoers` file for 
 * give a certain user privileges for commands relating to configuring the network ?
 
 
-## Challenge (You do)
+## Challenge
 
 **Students will not edit the sudoers file on their own computer (if it has one)**. We will find an alternative like a VM or online terminal.
 
@@ -159,11 +150,8 @@ Let's go over an example for what would be added to the `/etc/sudoers` file for 
 - [The sudo command](https://www.unixtutorial.org/commands/sudo)
 - [How to use visudo](https://www.unixtutorial.org/how-to-use-visudo)# Understand the permission levels of r+w+x and how to check permissions for files and user groups
 
-## Instructor Notes
 
-## Required Resources
-
-## Overview (I do)
+## Overview
 
 All files in Linux are owned by a single user and a single group and every file has permissions associated with it determining who can view, edit, and run that file. The three permission levels are denoted by:
 
@@ -189,11 +177,11 @@ drwxr-xr-x 11 cyberuser mygroup   4096 Mar 18 20:05 myblog
 ```
 On the left is the information about the permission for each file. There is a lot of information here so we'll break it down with the following graphic.
 
-![File Listing Permissions](../../images/FileListingPerm.png)
+(image not included)
 
 The parts that we are interested in are the file mode, and who the user and groups are. The mode on the left indicates the permissions for the user, group, and other (everyone else).
 
-![r-w-x Graphic](../../images/RWXgraphic.png)
+(image not included)
 
 The file type is indicated on the left: d for directory and blank for a regular file. In the following example, the directory has read-write-execute permission for the user, and read-execute permission for the group and others.
 
@@ -201,11 +189,11 @@ The file type is indicated on the left: d for directory and blank for a regular 
 drwxr-xr-x  4 cyberuser mygoup    4096 Jun 27 07:02 lambda_cybersec
 ```
 
-## Follow Along (We do)
+## Follow Along
 
 We'll open a terminal and explore our local file system. This will include going over examples of permissions for directories, files, and the groups on the system.
 
-## Challenge (You do)
+## Challenge
 
 You will explore your own files (*or maybe use a VM for this exercise?*) and find examples of:
 
@@ -218,11 +206,7 @@ You will explore your own files (*or maybe use a VM for this exercise?*) and fin
 
 - [Linux file permissions](https://www.booleanworld.com/introduction-linux-file-permissions/)# Know how to use `chmod` and`chown` to change permissions and how permissions are represented numerically
 
-## Instructor Notes
-
-## Required Resources
-
-## Overview (I do)
+## Overview
 
 We've already covered permission levels and classes. When managing both your own files and files on another computer, it will be necessary to change permissions for certain users and groups.
 
@@ -258,14 +242,13 @@ where
 
 The digits represent the **ugo** permission classes: 7 corresponds to the permission for the **u**ser, the 5 for the **g**roup, and the 4 for **o**ther. The graphic below summarizes the symbolic and octal-modes.
 
-![Octal Permissions](../../images/chmodGraphic.png)
+(image not included)
 
-
-## Follow Along (We do)
+## Follow Along
 
 We will create a few files and change the permissions with both symbolic and octal notation. When using `chmod`, the more you practice the easier it will be to remember the shortcut octal-modes.
 
-## Challenge (You do)
+## Challenge
 
 Use both `chmod` and learn about another command `chown` that works in a similar way. Change the permissions on files using both methods.
 

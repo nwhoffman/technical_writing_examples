@@ -190,9 +190,6 @@ It's more fun to practice on files that are interesting to you. To have a little
 - [Managing files (head/tail)](https://www.tecmint.com/view-contents-of-file-in-linux/)
 # Know how to use `sed`to do a basic search/replace
 
-## Instructor Notes
-
-## Required Resources
 
 ## Overview
 
@@ -256,15 +253,11 @@ It is pretty common to pipe the output from `ls` into a pager command like `less
 $ ls -al /etc | less
 ```
 
-![Pipe Output](../../images/PipeOutput1.png)
-
 It's alo pretty common to use `|` with `grep`. Let's try out an example looking for all files in the `/etc` directory that  contain the string *conf* for configuration files. We will also pipe the output from `grep` into `less`:
 
 ```bash
 $  ls -al /etc/ | grep conf | less
 ```
-
-![Pipe Output grep](../../images/PipeOutput2.png)	
 
 Now we can see that all of the files have *conf* in the name.	
 	
